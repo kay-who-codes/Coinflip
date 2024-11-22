@@ -5,16 +5,15 @@ body {
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Ensures the body stretches to the full height of the viewport */
+  align-items: center;   
+  min-height: 100vh;    
 }
 
 #app {
   text-align: center;
-  width: 100%; /* Ensures the app takes up the full available space */
-  max-width: 400px; /* Optional: constrain the width for better UI */
-  margin-bottom: auto; /* Pushes the footer to the bottom */
+  width: 100%;
+  max-width: 400px;
 }
 
 #result-box {
@@ -78,7 +77,7 @@ body {
   text-align: center;
   background-color: #f8f8f8;
   width: 100%;
-  margin-top: auto; /* Pushes the footer to the bottom of the page */
+  margin-top: auto; 
   position: relative;
 }
 
