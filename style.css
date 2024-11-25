@@ -32,6 +32,7 @@ body {
   height: calc(100vh - 120px); /* Adjust for header and footer */
 }
 
+/* Coin Flip Result Box */
 #result-box {
   width: 300px;
   height: 300px;
@@ -48,8 +49,22 @@ body {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
+/* Active Result Box - Button Pressed */
 #result-box:active {
   transform: scale(0.95);
+}
+
+/* Animation for Coin Flip */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 /* Header Bar */
@@ -77,42 +92,6 @@ body {
 
 .header-link:hover {
   text-decoration: underline;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  background-color: var(--button-color);
-  border: 2px solid var(--button-outline-color);
-  color: var(--button-text-color);
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--background-color);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  right: 0;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  color: var(--text-color);
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--button-color);
 }
 
 /* Footer */
