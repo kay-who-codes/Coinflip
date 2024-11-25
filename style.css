@@ -118,10 +118,6 @@ body {
   z-index: 1001;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 .dropdown-content a {
   color: var(--text-color);
   padding: 10px;
