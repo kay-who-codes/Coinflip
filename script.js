@@ -1,4 +1,12 @@
-// Select DOM elements
+// DARK MODE / LIGHT MODE TOGGLE FUNCTIONALITY
+const themeSwitch = document.getElementById("themeSwitch");
+
+// Add event listener for the theme switch toggle
+themeSwitch.addEventListener("change", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+// Coin Flip Functionality
 const resultBox = document.getElementById('result-box');
 const coinSound = document.getElementById('coin-sound');
 
