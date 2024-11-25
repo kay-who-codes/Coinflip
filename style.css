@@ -5,7 +5,7 @@
   --button-color: #ffffff;
   --button-outline-color: #000000;
   --button-text-color: #000000;
-  --header-bar-background-color: #ffffff;
+  --header-bar-background-color: #ffffff; /* Light mode background for header */
 }
 
 body.dark-mode {
@@ -14,6 +14,7 @@ body.dark-mode {
   --button-color: #1b1b1b;
   --button-outline-color: #737373;
   --button-text-color: #ffffff;
+  --header-bar-background-color: #1b1b1b; /* Dark mode background for header */
 }
 
 /* General Styles */
