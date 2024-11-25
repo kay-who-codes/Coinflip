@@ -5,22 +5,27 @@ body {
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centre vertically */
-  align-items: center;    /* Centre horizontally */
-  min-height: 100vh;      /* Ensure the body stretches to fill the viewport */
-  text-align: center;     /* Ensure text alignment is centred */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme changes */
+  justify-content: center; /* Vertically center content */
+  align-items: center;    /* Horizontally center content */
+  min-height: 100vh;      /* Ensure body stretches to viewport height */
+  text-align: center;     /* Centre text alignment */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* App container */
 #app {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensures the coin stays centred */
 }
 
 /* Circular Coin Styling */
 #result-box {
   width: 300px;
   height: 300px;
-  margin: 0; /* Ensure no unwanted spacing */
+  margin: 0; /* Ensure no extra spacing */
   display: flex;
   justify-content: center; /* Centre text horizontally */
   align-items: center;    /* Centre text vertically */
@@ -32,12 +37,32 @@ body {
   color: #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer; /* Indicate interactivity */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Flip Animation */
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+.flip-animation {
+  animation: flip 0.3s ease-in-out;
 }
 
 /* Dark Mode Theme */
 body.dark-mode {
-  background-color: #222; /* Dark background */
-  color: #fff; /* Light text colour */
+  background-color: #222;
+  color: #fff;
 }
 
 body.dark-mode #result-box {
@@ -54,7 +79,7 @@ body.dark-mode .credit-message {
 /* Theme Toggle Styles */
 .theme-toggle {
   margin-top: 20px;
-  margin-bottom: 50px; /* Ensure 50px whitespace below toggle */
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,8 +104,7 @@ body.dark-mode .credit-message {
   text-align: center;
   background-color: #f8f8f8;
   width: 100%;
-  margin-top: auto; /* Pushes the footer to the bottom */
-  position: relative;
+  margin-top: auto;
 }
 
 .credit-message a {
