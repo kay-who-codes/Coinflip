@@ -1,17 +1,24 @@
-document.getElementById('flip-button').addEventListener('click', function () {
-  // Generate random result
-  const result = Math.random() < 0.5 ? 'HEADS' : 'TAILS';
+// Select DOM elements
+const resultBox = document.getElementById('result-box');
+const coinSound = document.getElementById('coin-sound');
 
-  // Get the result box and set the result
-  const resultBox = document.getElementById('result-box');
+// Add click event listener to the result box
+resultBox.addEventListener('click', function () {
+  // Play the coin sound
+  coinSound.currentTime = 0; // Reset sound to start
+  coinSound.play();
 
-  // Optional: add animation class
+  // Generate a random result
+  const isHeads = Math.random() < 0.5;
+  const result = isHeads ? 'HEADS' : 'TAILS';
+
+  // Add flip animation
   resultBox.classList.remove('flip-animation');
   void resultBox.offsetWidth; // Trigger reflow to restart animation
   resultBox.classList.add('flip-animation');
 
-  // Update result text
+  // Update result after animation
   setTimeout(() => {
     resultBox.textContent = result;
-  }, 300); // Matches the animation duration
+  }, 300); // Matches animation duration
 });
