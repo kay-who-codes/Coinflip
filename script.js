@@ -32,3 +32,27 @@ resultBox.addEventListener('click', function () {
     resultBox.textContent = result;
   }, 300);  // Update text after animation (timed to match animation duration)
 });
+
+<script>
+  // Get the dropdown button and dropdown content
+  const dropbtn = document.querySelector('.dropbtn');
+  const dropdownContent = document.querySelector('.dropdown-content');
+
+  // Function to toggle the dropdown visibility
+  function toggleDropdown() {
+    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+  }
+
+  // Close the dropdown if the user clicks anywhere outside of it
+  document.addEventListener('click', function(event) {
+    if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+      dropdownContent.style.display = 'none';
+    }
+  });
+
+  // Add click event to the button to toggle the dropdown
+  dropbtn.addEventListener('click', function(event) {
+    event.stopPropagation();  // Prevent the click from being propagated to the document
+    toggleDropdown();  // Toggle the dropdown visibility
+  });
+</script>
