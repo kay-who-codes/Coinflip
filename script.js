@@ -28,5 +28,5 @@ resultBox.addEventListener('click', function () {
   // Update result after animation
   setTimeout(() => {
     resultBox.textContent = result;
-  }, 150); // Update text midway during the flip
+  }, 300); // Update text midway during the flip
 });
