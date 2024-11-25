@@ -20,13 +20,13 @@ resultBox.addEventListener('click', function () {
   const isHeads = Math.random() < 0.5;
   const result = isHeads ? 'HEADS' : 'TAILS';
 
-  // Add flip animation
-  resultBox.classList.remove('flip-animation');
-  void resultBox.offsetWidth; // Trigger reflow to restart animation
-  resultBox.classList.add('flip-animation');
+  // Restart flip animation
+  resultBox.style.animation = 'none'; // Reset animation
+  void resultBox.offsetHeight; // Trigger reflow to restart animation
+  resultBox.style.animation = 'flip 0.3s ease-in-out';
 
   // Update result after animation
   setTimeout(() => {
     resultBox.textContent = result;
-  }, 300); // Matches animation duration
+  }, 150); // Update text midway during the flip
 });
