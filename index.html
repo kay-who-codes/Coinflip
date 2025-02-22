@@ -5,43 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🪙 Coinflip</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
 </head>
 <body>
-  <!-- Header Bar -->
-  <header class="header-bar">
-    <a href="https://kay-who-codes.github.io/Coinflip/" class="header-link">Coinflip</a>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleDropdown()">More Apps</button>
-      <div class="dropdown-content">
-        <a href="https://kay-who-codes.github.io/Misanthrocards/">Game - Misanthrocards</a>
-        <a href="https://kay-who-codes.github.io/invention-cards/">Game - Invention Cards</a>
-        <a href="https://kay-who-codes.github.io/Job-Cards/">Game - Job Cards</a>
-        <a href="https://kay-who-codes.github.io/Soundboard/">App - Soundboard</a>
-        <a href="https://kay-who-codes.github.io/song-inspirator/">App - Song Inspirator</a>
-        <a href="https://kay-who-codes.github.io/random-numbers/">App - Random Number Generator</a>
-        <a href="https://github.com/kay-who-codes/takeaway-suggester">App - Takeaway Suggester</a>
-        <a href="https://github.com/kay-who-codes/coinflip">App - Coinflip</a>
-        <a href="https://github.com/kay-who-codes/memento-mori">App - Memento Mori</a>
-      </div>
-    </div>
-  </header>
+<!-- Header Bar -->
+<div id="header"></div>
+
+<!-- Main Content -->
   <div id="app">
     <div id="result-box">HEADS or TAILS</div>
     <audio id="coin-sound" src="Coin Drop.mp3"></audio>
   </div>
-
-  <!-- Dark Mode/Light Mode Toggle -->
-  <div class="theme-toggle">
-    <label for="themeSwitch">🌞 Light Mode</label>
-    <input type="checkbox" id="themeSwitch">
-    <label for="themeSwitch">🌙 Dark Mode</label>
-  </div>
-
   <!-- Credit Message -->
   <footer class="credit-message">
     Made by <a href="https://linktr.ee/kaywhocreates" target="_blank">Kay 🧡</a>
   </footer>
-
   <script src="script.js"></script>
+  <script src="header.js"></script>
 </body>
 </html>
